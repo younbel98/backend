@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: red-cross
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn mysite.wsgi
