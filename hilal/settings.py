@@ -75,14 +75,7 @@ WSGI_APPLICATION = "hilal.wsgi.application"
 
 
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.postgresql",
-        "NAME": "red_cross_db",
-        "USER": "red_cross",
-        "PASSWORD": "redcross2025",
-        "HOST": "localhost",  # Change if using a remote DB
-        "PORT": "5432",  # Default PostgreSQL port
-    }
+    'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))
 }
 
 
